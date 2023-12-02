@@ -10,9 +10,9 @@ import (
 	"testing"
 
 	"github.com/hashicorp/terraform-plugin-sdk/v2/terraform"
-	"github.com/hashicorp/terraform-provider-vsphere/vsphere/internal/helper/datacenter"
-	"github.com/hashicorp/terraform-provider-vsphere/vsphere/internal/helper/virtualmachine"
-	"github.com/hashicorp/terraform-provider-vsphere/vsphere/internal/virtualdevice"
+	"github.com/kube-cloud/terraform-provider-vsphere/vsphere/internal/helper/datacenter"
+	"github.com/kube-cloud/terraform-provider-vsphere/vsphere/internal/helper/virtualmachine"
+	"github.com/kube-cloud/terraform-provider-vsphere/vsphere/internal/virtualdevice"
 	"github.com/vmware/govmomi/object"
 	"github.com/vmware/govmomi/vim25/types"
 )

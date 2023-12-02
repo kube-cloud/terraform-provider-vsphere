@@ -9,7 +9,7 @@ import (
 	"context"
 
 	"github.com/hashicorp/terraform-plugin-sdk/v2/helper/schema"
-	"github.com/hashicorp/terraform-provider-vsphere/vsphere/internal/helper/structure"
+	"github.com/kube-cloud/terraform-provider-vsphere/vsphere/internal/helper/structure"
 )
 
 func resourceVSphereHostPortGroup() *schema.Resource {

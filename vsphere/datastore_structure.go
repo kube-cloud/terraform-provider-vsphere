@@ -7,10 +7,10 @@ import (
 	"fmt"
 
 	"github.com/hashicorp/terraform-plugin-sdk/v2/helper/schema"
-	"github.com/hashicorp/terraform-provider-vsphere/vsphere/internal/helper/datastore"
-	"github.com/hashicorp/terraform-provider-vsphere/vsphere/internal/helper/folder"
-	"github.com/hashicorp/terraform-provider-vsphere/vsphere/internal/helper/storagepod"
-	"github.com/hashicorp/terraform-provider-vsphere/vsphere/internal/helper/structure"
+	"github.com/kube-cloud/terraform-provider-vsphere/vsphere/internal/helper/datastore"
+	"github.com/kube-cloud/terraform-provider-vsphere/vsphere/internal/helper/folder"
+	"github.com/kube-cloud/terraform-provider-vsphere/vsphere/internal/helper/storagepod"
+	"github.com/kube-cloud/terraform-provider-vsphere/vsphere/internal/helper/structure"
 	"github.com/vmware/govmomi/object"
 	"github.com/vmware/govmomi/vim25/types"
 )
