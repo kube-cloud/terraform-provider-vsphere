@@ -5,11 +5,12 @@ package vsphere
 
 import (
 	"fmt"
+	"testing"
+
 	"github.com/hashicorp/terraform-plugin-sdk/v2/helper/acctest"
 	"github.com/hashicorp/terraform-plugin-sdk/v2/helper/resource"
 	"github.com/hashicorp/terraform-plugin-sdk/v2/terraform"
-	"github.com/hashicorp/terraform-provider-vsphere/vsphere/internal/helper/guestoscustomizations"
-	"testing"
+	"github.com/kube-cloud/terraform-provider-vsphere/vsphere/internal/helper/guestoscustomizations"
 )
 
 func TestAccResourceVSpherGOSC_windows_basic(t *testing.T) {

@@ -8,7 +8,7 @@ import (
 	"strings"
 
 	"github.com/hashicorp/terraform-plugin-sdk/v2/helper/schema"
-	"github.com/hashicorp/terraform-provider-vsphere/vsphere/internal/helper/contentlibrary"
+	"github.com/kube-cloud/terraform-provider-vsphere/vsphere/internal/helper/contentlibrary"
 )
 
 func resourceVSphereContentLibrary() *schema.Resource {

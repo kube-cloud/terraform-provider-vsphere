@@ -9,7 +9,7 @@ body:
   - type: markdown
     attributes:
       value: |
-        Before filing an enhancement or feature, please [search the existing issues](https://github.com/hashicorp/terraform-provider-vsphere/issues?q=is%3Aissue+is%3Aopen+label%3Aenhancement) for related requests, and use the [reaction](https://blog.github.com/2016-03-10-add-reactions-to-pull-requests-issues-and-comments/) feature to add up-votes to existing requests.
+        Before filing an enhancement or feature, please [search the existing issues](https://github.com/kube-cloud/terraform-provider-vsphere/issues?q=is%3Aissue+is%3Aopen+label%3Aenhancement) for related requests, and use the [reaction](https://blog.github.com/2016-03-10-add-reactions-to-pull-requests-issues-and-comments/) feature to add up-votes to existing requests.
         
         When filing an enhancement issue, please include the following information.
   - type: checkboxes

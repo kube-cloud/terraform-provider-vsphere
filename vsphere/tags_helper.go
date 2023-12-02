@@ -10,8 +10,8 @@ import (
 	"strings"
 
 	"github.com/hashicorp/terraform-plugin-sdk/v2/helper/schema"
-	"github.com/hashicorp/terraform-provider-vsphere/vsphere/internal/helper/structure"
-	"github.com/hashicorp/terraform-provider-vsphere/vsphere/internal/helper/viapi"
+	"github.com/kube-cloud/terraform-provider-vsphere/vsphere/internal/helper/structure"
+	"github.com/kube-cloud/terraform-provider-vsphere/vsphere/internal/helper/viapi"
 	"github.com/vmware/govmomi"
 	"github.com/vmware/govmomi/object"
 	"github.com/vmware/govmomi/vapi/tags"
@@ -51,7 +51,7 @@ const vSphereTagCategorySearchErrMultiple = `
 Category name %q returned multiple results!
 
 This is a bug - please report it at:
-https://github.com/hashicorp/terraform-provider-vsphere/issues
+https://github.com/kube-cloud/terraform-provider-vsphere/issues
 
 This version of the provider requires unique category names. To work around
 this issue, please use a category name unique within your vCenter system.
@@ -64,7 +64,7 @@ const vSphereTagSearchErrMultiple = `
 Tag name %q returned multiple results!
 
 This is a bug - please report it at:
-https://github.com/hashicorp/terraform-provider-vsphere/issues
+https://github.com/kube-cloud/terraform-provider-vsphere/issues
 
 This version of the provider requires unique tag names. To work around
 this issue, please use a tag name unique within your vCenter system.

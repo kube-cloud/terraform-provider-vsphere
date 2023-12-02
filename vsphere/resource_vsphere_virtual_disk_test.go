@@ -9,7 +9,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/hashicorp/terraform-provider-vsphere/vsphere/internal/helper/testhelper"
+	"github.com/kube-cloud/terraform-provider-vsphere/vsphere/internal/helper/testhelper"
 
 	"context"
 

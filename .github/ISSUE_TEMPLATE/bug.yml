@@ -9,7 +9,7 @@ body:
   - type: markdown
     attributes:
       value: |
-        Before filing an issue, please [search the existing issues](https://github.com/hashicorp/terraform-provider-vsphere/issues?q=is%3Aissue+is%3Aopen+label%3Abug) (open or closed), and use the [reaction](https://blog.github.com/2016-03-10-add-reactions-to-pull-requests-issues-and-comments/) feature to add up-votes to existing issues.
+        Before filing an issue, please [search the existing issues](https://github.com/kube-cloud/terraform-provider-vsphere/issues?q=is%3Aissue+is%3Aopen+label%3Abug) (open or closed), and use the [reaction](https://blog.github.com/2016-03-10-add-reactions-to-pull-requests-issues-and-comments/) feature to add up-votes to existing issues.
         
         When filing an issue, please include the following information.
   - type: checkboxes
@@ -40,7 +40,7 @@ body:
       label: Terraform Provider
       description: |
         Please provide the Terraform provider for VMware vSphere version.
-        We recommend testing with [the latest version of the provider](https://github.com/hashicorp/terraform-provider-vsphere/releases/latest).
+        We recommend testing with [the latest version of the provider](https://github.com/kube-cloud/terraform-provider-vsphere/releases/latest).
       placeholder: e.g. v2.2.0
     validations:
        required: true

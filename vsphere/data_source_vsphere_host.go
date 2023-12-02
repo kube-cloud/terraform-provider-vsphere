@@ -7,7 +7,7 @@ import (
 	"fmt"
 
 	"github.com/hashicorp/terraform-plugin-sdk/v2/helper/schema"
-	"github.com/hashicorp/terraform-provider-vsphere/vsphere/internal/helper/hostsystem"
+	"github.com/kube-cloud/terraform-provider-vsphere/vsphere/internal/helper/hostsystem"
 )
 
 func dataSourceVSphereHost() *schema.Resource {

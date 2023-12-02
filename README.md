@@ -5,7 +5,7 @@
 
 # Terraform Provider for VMware vSphere
 
-[![GitHub tag (latest SemVer)](https://img.shields.io/github/v/tag/hashicorp/terraform-provider-vsphere?label=release&style=for-the-badge)](https://github.com/hashicorp/terraform-provider-vsphere/releases/latest) [![License](https://img.shields.io/github/license/hashicorp/terraform-provider-vsphere.svg?style=for-the-badge)](LICENSE)
+[![GitHub tag (latest SemVer)](https://img.shields.io/github/v/tag/hashicorp/terraform-provider-vsphere?label=release&style=for-the-badge)](https://github.com/kube-cloud/terraform-provider-vsphere/releases/latest) [![License](https://img.shields.io/github/license/hashicorp/terraform-provider-vsphere.svg?style=for-the-badge)](LICENSE)
 
 The Terraform Provider for VMware vSphere is a plugin for Terraform that allows you to interact with VMware vSphere, notably [vCenter Server][vmware-vcenter] and [ESXi][vmware-esxi]. This provider can be used to manage a VMware vSphere environment, including virtual machines, host and cluster management, inventory, networking, storage, datastores, content libraries, and more.
 
@@ -76,7 +76,7 @@ The Terraform Provider for VMware vSphere is available under the [Mozilla Public
 [provider-discussions]: https://discuss.hashicorp.com/tags/c/terraform-providers/31/vsphere
 [provider-faq]: docs/FAQ.md
 [provider-install]: docs/INSTALL.md
-[provider-issues]: https://github.com/hashicorp/terraform-provider-vsphere/issues/new/choose
+[provider-issues]: https://github.com/kube-cloud/terraform-provider-vsphere/issues/new/choose
 [provider-issue-lifecycke]: docs/ISSUES.md
 [provider-license]: LICENSE
 [terraform-install]: https://www.terraform.io/downloads.html
