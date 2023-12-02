@@ -7,15 +7,15 @@ import (
 	"fmt"
 	"reflect"
 
-	"github.com/hashicorp/terraform-provider-vsphere/vsphere/internal/helper/ovfdeploy"
+	"github.com/kube-cloud/terraform-provider-vsphere/vsphere/internal/helper/ovfdeploy"
 
-	"github.com/hashicorp/terraform-provider-vsphere/vsphere/internal/helper/folder"
+	"github.com/kube-cloud/terraform-provider-vsphere/vsphere/internal/helper/folder"
 
 	"github.com/vmware/govmomi/vim25/types"
 
 	"github.com/hashicorp/terraform-plugin-sdk/v2/helper/schema"
-	"github.com/hashicorp/terraform-provider-vsphere/vsphere/internal/helper/structure"
-	"github.com/hashicorp/terraform-provider-vsphere/vsphere/internal/vmworkflow"
+	"github.com/kube-cloud/terraform-provider-vsphere/vsphere/internal/helper/structure"
+	"github.com/kube-cloud/terraform-provider-vsphere/vsphere/internal/vmworkflow"
 )
 
 func dataSourceVSphereOvfVMTemplate() *schema.Resource {

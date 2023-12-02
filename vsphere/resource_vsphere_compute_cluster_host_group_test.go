@@ -12,13 +12,13 @@ import (
 	"sort"
 	"testing"
 
-	"github.com/hashicorp/terraform-provider-vsphere/vsphere/internal/helper/testhelper"
+	"github.com/kube-cloud/terraform-provider-vsphere/vsphere/internal/helper/testhelper"
 
 	"github.com/davecgh/go-spew/spew"
 	"github.com/hashicorp/terraform-plugin-sdk/v2/helper/resource"
 	"github.com/hashicorp/terraform-plugin-sdk/v2/terraform"
-	"github.com/hashicorp/terraform-provider-vsphere/vsphere/internal/helper/structure"
-	"github.com/hashicorp/terraform-provider-vsphere/vsphere/internal/helper/viapi"
+	"github.com/kube-cloud/terraform-provider-vsphere/vsphere/internal/helper/structure"
+	"github.com/kube-cloud/terraform-provider-vsphere/vsphere/internal/helper/viapi"
 	"github.com/vmware/govmomi/vim25/types"
 )
 

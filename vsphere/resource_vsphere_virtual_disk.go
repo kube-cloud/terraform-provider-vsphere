@@ -14,7 +14,7 @@ import (
 	"context"
 
 	"github.com/hashicorp/terraform-plugin-sdk/v2/helper/schema"
-	"github.com/hashicorp/terraform-provider-vsphere/vsphere/internal/helper/virtualdisk"
+	"github.com/kube-cloud/terraform-provider-vsphere/vsphere/internal/helper/virtualdisk"
 	"github.com/vmware/govmomi"
 	"github.com/vmware/govmomi/find"
 	"github.com/vmware/govmomi/object"
@@ -306,7 +306,7 @@ func resourceVSphereVirtualDiskRead(d *schema.ResourceData, meta interface{}) er
 	/**
 	Thick Provisioned Lazy Zeroed disk type a.k.a "lazy" in the provider context is actually
 	"preallocated" for the VC. Due to historical reasons i.e. the disk type is documented as "lazy".
-	In order to fix https://github.com/hashicorp/terraform-provider-vsphere/issues/1824 the value must be converted,
+	In order to fix https://github.com/kube-cloud/terraform-provider-vsphere/issues/1824 the value must be converted,
 	otherwise the disk is recreated
 	*/
 	if diskType == "preallocated" {

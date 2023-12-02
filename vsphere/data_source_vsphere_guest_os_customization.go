@@ -5,7 +5,7 @@ package vsphere
 
 import (
 	"github.com/hashicorp/terraform-plugin-sdk/v2/helper/schema"
-	"github.com/hashicorp/terraform-provider-vsphere/vsphere/internal/helper/guestoscustomizations"
+	"github.com/kube-cloud/terraform-provider-vsphere/vsphere/internal/helper/guestoscustomizations"
 )
 
 func dataSourceVSphereGuestOSCustomization() *schema.Resource {

@@ -11,14 +11,14 @@ import (
 	"strconv"
 	"testing"
 
-	"github.com/hashicorp/terraform-provider-vsphere/vsphere/internal/helper/testhelper"
+	"github.com/kube-cloud/terraform-provider-vsphere/vsphere/internal/helper/testhelper"
 
 	"github.com/vmware/govmomi/vim25/types"
 
 	"github.com/vmware/govmomi"
 
-	"github.com/hashicorp/terraform-provider-vsphere/vsphere/internal/helper/hostsystem"
-	"github.com/hashicorp/terraform-provider-vsphere/vsphere/internal/helper/viapi"
+	"github.com/kube-cloud/terraform-provider-vsphere/vsphere/internal/helper/hostsystem"
+	"github.com/kube-cloud/terraform-provider-vsphere/vsphere/internal/helper/viapi"
 
 	"github.com/hashicorp/terraform-plugin-sdk/v2/helper/resource"
 	"github.com/hashicorp/terraform-plugin-sdk/v2/terraform"

@@ -9,7 +9,7 @@ import (
 	"fmt"
 	"log"
 
-	"github.com/hashicorp/terraform-provider-vsphere/vsphere/internal/helper/virtualmachine"
+	"github.com/kube-cloud/terraform-provider-vsphere/vsphere/internal/helper/virtualmachine"
 	"github.com/vmware/govmomi/object"
 	"github.com/vmware/govmomi/vim25"
 	"github.com/vmware/govmomi/vim25/methods"

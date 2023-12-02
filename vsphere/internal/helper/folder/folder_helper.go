@@ -11,8 +11,8 @@ import (
 	"path"
 	"strings"
 
-	"github.com/hashicorp/terraform-provider-vsphere/vsphere/internal/helper/provider"
-	"github.com/hashicorp/terraform-provider-vsphere/vsphere/internal/helper/viapi"
+	"github.com/kube-cloud/terraform-provider-vsphere/vsphere/internal/helper/provider"
+	"github.com/kube-cloud/terraform-provider-vsphere/vsphere/internal/helper/viapi"
 	"github.com/vmware/govmomi"
 	"github.com/vmware/govmomi/find"
 	"github.com/vmware/govmomi/object"

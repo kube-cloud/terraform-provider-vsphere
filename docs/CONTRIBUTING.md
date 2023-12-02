@@ -40,8 +40,8 @@ make install
 
 **NOTE:** Before you start work on a feature, please make sure to check the [issue tracker][gh-issues] and existing [pull requests][gh-prs] to ensure that work is not being duplicated. For further clarification, you can also ask in a new issue.
 
-[gh-issues]: https://github.com/hashicorp/terraform-provider-vsphere/issues
-[gh-prs]: https://github.com/hashicorp/terraform-provider-vsphere/pulls
+[gh-issues]: https://github.com/kube-cloud/terraform-provider-vsphere/issues
+[gh-prs]: https://github.com/kube-cloud/terraform-provider-vsphere/pulls
 
 If you wish to work on the provider, you'll first need [Go][go-website] installed on your machine.
 

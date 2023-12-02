@@ -17,12 +17,12 @@ import (
 	"sync/atomic"
 	"time"
 
-	"github.com/hashicorp/terraform-provider-vsphere/vsphere/internal/helper/datastore"
-	"github.com/hashicorp/terraform-provider-vsphere/vsphere/internal/helper/folder"
-	"github.com/hashicorp/terraform-provider-vsphere/vsphere/internal/helper/hostsystem"
-	"github.com/hashicorp/terraform-provider-vsphere/vsphere/internal/helper/resourcepool"
+	"github.com/kube-cloud/terraform-provider-vsphere/vsphere/internal/helper/datastore"
+	"github.com/kube-cloud/terraform-provider-vsphere/vsphere/internal/helper/folder"
+	"github.com/kube-cloud/terraform-provider-vsphere/vsphere/internal/helper/hostsystem"
+	"github.com/kube-cloud/terraform-provider-vsphere/vsphere/internal/helper/resourcepool"
 
-	"github.com/hashicorp/terraform-provider-vsphere/vsphere/internal/helper/network"
+	"github.com/kube-cloud/terraform-provider-vsphere/vsphere/internal/helper/network"
 	"github.com/vmware/govmomi"
 	"github.com/vmware/govmomi/object"
 	"github.com/vmware/govmomi/ovf"

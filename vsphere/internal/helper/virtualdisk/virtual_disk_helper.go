@@ -9,8 +9,8 @@ import (
 	"log"
 	"path"
 
-	"github.com/hashicorp/terraform-provider-vsphere/vsphere/internal/helper/provider"
-	"github.com/hashicorp/terraform-provider-vsphere/vsphere/internal/helper/structure"
+	"github.com/kube-cloud/terraform-provider-vsphere/vsphere/internal/helper/provider"
+	"github.com/kube-cloud/terraform-provider-vsphere/vsphere/internal/helper/structure"
 	"github.com/vmware/govmomi"
 	"github.com/vmware/govmomi/object"
 	"github.com/vmware/govmomi/vim25/types"

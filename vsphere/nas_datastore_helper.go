@@ -7,8 +7,8 @@ import (
 	"context"
 	"fmt"
 
-	"github.com/hashicorp/terraform-provider-vsphere/vsphere/internal/helper/hostsystem"
-	"github.com/hashicorp/terraform-provider-vsphere/vsphere/internal/helper/viapi"
+	"github.com/kube-cloud/terraform-provider-vsphere/vsphere/internal/helper/hostsystem"
+	"github.com/kube-cloud/terraform-provider-vsphere/vsphere/internal/helper/viapi"
 	"github.com/vmware/govmomi"
 	"github.com/vmware/govmomi/object"
 	"github.com/vmware/govmomi/vim25/types"

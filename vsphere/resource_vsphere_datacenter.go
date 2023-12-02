@@ -14,9 +14,9 @@ import (
 
 	"github.com/hashicorp/terraform-plugin-sdk/v2/helper/resource"
 	"github.com/hashicorp/terraform-plugin-sdk/v2/helper/schema"
-	"github.com/hashicorp/terraform-provider-vsphere/vsphere/internal/helper/customattribute"
-	"github.com/hashicorp/terraform-provider-vsphere/vsphere/internal/helper/datacenter"
-	"github.com/hashicorp/terraform-provider-vsphere/vsphere/internal/helper/folder"
+	"github.com/kube-cloud/terraform-provider-vsphere/vsphere/internal/helper/customattribute"
+	"github.com/kube-cloud/terraform-provider-vsphere/vsphere/internal/helper/datacenter"
+	"github.com/kube-cloud/terraform-provider-vsphere/vsphere/internal/helper/folder"
 	"github.com/vmware/govmomi/find"
 	"github.com/vmware/govmomi/object"
 	"github.com/vmware/govmomi/vim25/methods"

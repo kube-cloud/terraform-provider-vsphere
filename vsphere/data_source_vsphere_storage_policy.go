@@ -5,7 +5,7 @@ package vsphere
 
 import (
 	"github.com/hashicorp/terraform-plugin-sdk/v2/helper/schema"
-	"github.com/hashicorp/terraform-provider-vsphere/vsphere/internal/helper/spbm"
+	"github.com/kube-cloud/terraform-provider-vsphere/vsphere/internal/helper/spbm"
 )
 
 func dataSourceVSphereStoragePolicy() *schema.Resource {

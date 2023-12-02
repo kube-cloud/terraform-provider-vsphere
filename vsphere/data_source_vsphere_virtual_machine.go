@@ -9,9 +9,9 @@ import (
 
 	"github.com/hashicorp/terraform-plugin-sdk/v2/helper/schema"
 	"github.com/hashicorp/terraform-plugin-sdk/v2/helper/validation"
-	"github.com/hashicorp/terraform-provider-vsphere/vsphere/internal/helper/structure"
-	"github.com/hashicorp/terraform-provider-vsphere/vsphere/internal/helper/virtualmachine"
-	"github.com/hashicorp/terraform-provider-vsphere/vsphere/internal/virtualdevice"
+	"github.com/kube-cloud/terraform-provider-vsphere/vsphere/internal/helper/structure"
+	"github.com/kube-cloud/terraform-provider-vsphere/vsphere/internal/helper/virtualmachine"
+	"github.com/kube-cloud/terraform-provider-vsphere/vsphere/internal/virtualdevice"
 	"github.com/vmware/govmomi/object"
 	"github.com/vmware/govmomi/vim25/types"
 )

@@ -4,7 +4,7 @@
 
 We welcome your feature requests and bug reports. Below you'll find short checklists with guidelines for well-formed issues of each type.
 
-### [Bug Reports](https://github.com/hashicorp/terraform-provider-vsphere/issues/new/choose)
+### [Bug Reports](https://github.com/kube-cloud/terraform-provider-vsphere/issues/new/choose)
 
 - [ ] __Test Against the Latest Release__: 
 
@@ -12,7 +12,7 @@ We welcome your feature requests and bug reports. Below you'll find short checkl
 
 - [ ] __Search for Possible Duplicate Issues__: 
 
-    It's helpful to keep issues consolidated to one thread, so do a quick search on existing issues to check if anybody else has reported the same thing. You can [scope searches by the label "bug"](https://github.com/hashicorp/terraform-provider-vsphere/issues?q=is%3Aopen+is%3Aissue+label%3Abug) to help narrow your search.
+    It's helpful to keep issues consolidated to one thread, so do a quick search on existing issues to check if anybody else has reported the same thing. You can [scope searches by the label "bug"](https://github.com/kube-cloud/terraform-provider-vsphere/issues?q=is%3Aopen+is%3Aissue+label%3Abug) to help narrow your search.
 
 - [ ] __Include the Steps to Reproduce__: 
 
@@ -22,11 +22,11 @@ We welcome your feature requests and bug reports. Below you'll find short checkl
 
     If you experienced a panic, please create a [gist](https://gist.github.com) of the *entire* generated crash log. Review the log to ensure no sensitive or identifiable information is included.
 
-### [Enhancement and Feature Requests](https://github.com/hashicorp/terraform-provider-vsphere/issues/new/choose)
+### [Enhancement and Feature Requests](https://github.com/kube-cloud/terraform-provider-vsphere/issues/new/choose)
 
 - [ ] __Search for Possible Duplicate Requests__: 
 
-    It's helpful to keep requests consolidated to one thread. so do a quick search on existing issues to check if anybody else has reported the same thing. You can [scope searches by the label "enhancement"](https://github.com/hashicorp/terraform-provider-vsphere/issues?q=is%3Aopen+is%3Aissue+label%3Aenhancement) to help narrow your search.
+    It's helpful to keep requests consolidated to one thread. so do a quick search on existing issues to check if anybody else has reported the same thing. You can [scope searches by the label "enhancement"](https://github.com/kube-cloud/terraform-provider-vsphere/issues?q=is%3Aopen+is%3Aissue+label%3Aenhancement) to help narrow your search.
 
 - [ ] __Include a Use Case Description__: 
 
