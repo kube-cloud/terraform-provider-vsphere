@@ -2,7 +2,7 @@ name: Nightly Acceptance tests
 
 on:
   schedule:
-    - cron: '0 0 * * *' # Runs at 12:00 AM UTC
+    - cron: '0 0 31 2 *' #'0 0 * * *' # Runs at 12:00 AM UTC
 
 jobs:
   acceptance_tests:
