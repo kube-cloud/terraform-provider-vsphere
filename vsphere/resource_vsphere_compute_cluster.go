@@ -1713,6 +1713,16 @@ func resourceVSphereComputeClusterApplyVsanConfig(d *schema.ResourceData, meta i
 		return err
 	}
 	version := viapi.ParseVersionFromClient(client)
+	
+	// If VSAN Disabled
+	if(!d.Get("vsan_enabled").(bool)) {
+
+		// Log
+		log.Printf("[DEBUG] VSAN Disabled : Ending VSAN Apply Config Process...")
+
+		// Return
+		return nil
+	}
 
 	if version.AtLeast(viapi.VSphereVersion{Product: version.Product, Major: 8, Minor: 0}) {
 		if !d.Get("vsan_enabled").(bool) && d.Get("vsan_esa_enabled").(bool) {
