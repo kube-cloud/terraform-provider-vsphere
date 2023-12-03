@@ -47,4 +47,6 @@ jobs:
     secrets:
       gpg-private-key: '${{ secrets.GPG_PRIVATE_KEY }}'
     with:
-      setup-go-version-file: 'go.mod'
+      setup-go-version-file: '.go-version'
+      release-notes: true
+      product-version: '${{ github.ref_name }}'
