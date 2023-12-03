@@ -38,7 +38,9 @@ jobs:
           name: release-notes
           path: release-notes.txt
           retention-days: 1
-  
+      - name: Print Branch/Tag Name
+        run: echo "Current Branch/Tag Reference = ${{ github.ref }}"
+
   # Perform Release terraform Provider Stage
   terraform-provider-release:
     name: 'Terraform Provider Release'
@@ -46,7 +48,8 @@ jobs:
     uses: hashicorp/ghaction-terraform-provider-release/.github/workflows/hashicorp.yml@v2
     secrets:
       gpg-private-key: '${{ secrets.GPG_PRIVATE_KEY }}'
+      gpg-private-key-passphrase: ${{ secrets.PASSPHRASE }}
     with:
-      setup-go-version-file: '.go-version'
+      setup-go-version: 1.21.4
       release-notes: true
       product-version: '${{ github.ref_name }}'
