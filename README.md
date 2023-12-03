@@ -86,3 +86,12 @@ The Terraform Provider for VMware vSphere is available under the [Mozilla Public
 [vmware-product-lifecycle-matrix]: https://lifecycle.vmware.com
 [vmware-vcenter]: https://www.vmware.com/products/vcenter-server.html
 [vmware-vsphere-documenation]: https://docs.vmware.com/en/VMware-vSphere
+
+# To Release
+
+* Export GPG Private Key
+
+```bash
+gpg --export-secret-keys -a D0BD2EAD971FE98029AD2E7D41252BEB67948F74 > private.key
+```
+* Copy Exported Private Key and create a Secret named `GPG_PRIVATE_KEY`
