@@ -12,15 +12,15 @@ builds:
     flags:
       - -trimpath
     goos:
-      - darwin
-      - freebsd
+      #- darwin
+      #- freebsd
       - linux
-      - windows
+      #- windows
     goarch:
-      - '386'
+      #- '386'
       - amd64
-      - arm
-      - arm64
+      #- arm
+      #- arm64
     ignore:
       - goarch: arm
         goos: windows
@@ -57,26 +57,29 @@ release:
     - none
 signs:
   # Default Signature file (i.e. terraform-provider-NAME_VERSION_SHA256SUMS.sig)
-  - cmd: sh
+  - artifacts: checksum
     args:
-    - -c
-    - >-
-      sign
-      --dearmor
-      --file ${artifact}
-      --out ${signature}
-    artifacts: checksum
+    - "--batch"
+    - "--local-user"
+    - "{{ .Env.GPG_FINGERPRINT }}"
+    - "--output"
+    - "${signature}"
+    - "--detach-sign"
+    - "${artifact}"
+    
   # Signature file with GPG Public Key ID in filename (i.e. terraform-provider-NAME_VERSION_SHA256SUMS.7685B676.sig)
-  - id: sig-with-gpg-public-key-id
+  - artifacts: checksum
+    id: sig-with-gpg-public-key-id
     signature: ${artifact}.72D7468F.sig
     cmd: sh
     args:
-    - -c
-    - >-
-      sign
-      --dearmor
-      --file ${artifact}
-      --out ${signature}
-    artifacts: checksum
+    - "--batch"
+    - "--local-user"
+    - "{{ .Env.GPG_FINGERPRINT }}"
+    - "--output"
+    - "${signature}"
+    - "--detach-sign"
+    - "${artifact}"
+    
 snapshot:
   name_template: "{{ .Tag }}-next"
