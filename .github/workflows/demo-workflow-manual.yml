@@ -33,4 +33,8 @@ jobs:
         passphrase: ${{ secrets.PASSPHRASE }}
     - name: LIST GPG KEYS
       run: gpg -K
+    - name: Install signore
+      uses: hashicorp/setup-signore@v2
+      with:
+        github-token: ${{ secrets.GITHUB_TOKEN }}
     
