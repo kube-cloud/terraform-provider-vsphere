@@ -52,4 +52,5 @@ jobs:
     with:
       setup-go-version: 1.21.4
       release-notes: true
-      product-version: '${{ github.ref_name }}'
+      git-ref: '${{ github.ref }}'
+      
