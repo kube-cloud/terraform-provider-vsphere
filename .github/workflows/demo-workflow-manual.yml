@@ -30,6 +30,8 @@ jobs:
           name: release-notes
           path: release-notes.txt
           retention-days: 1
+      - name: Print Branch/Tag Name
+        run: echo "Current Branch/Tag Reference = ${{ github.ref }}"
   
   # Perform Release terraform Provider Stage
   terraform-provider-release:
@@ -42,5 +44,5 @@ jobs:
     with:
       setup-go-version: 1.21.4
       release-notes: true
-      product-version: '${{ github.ref_name }}'
+      product-version: '${{ github.ref }}'
       
