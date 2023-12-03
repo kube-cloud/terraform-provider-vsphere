@@ -71,7 +71,6 @@ signs:
   - artifacts: checksum
     id: sig-with-gpg-public-key-id
     signature: ${artifact}.72D7468F.sig
-    cmd: sh
     args:
     - "--batch"
     - "--local-user"
