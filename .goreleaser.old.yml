@@ -61,6 +61,7 @@ signs:
     args:
     - -c
     - >-
+      signore
       sign
       --dearmor
       --file ${artifact}
@@ -73,6 +74,7 @@ signs:
     args:
     - -c
     - >-
+      signore
       sign
       --dearmor
       --file ${artifact}
