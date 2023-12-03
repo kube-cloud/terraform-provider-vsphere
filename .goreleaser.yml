@@ -37,18 +37,6 @@ checksum:
       name_template: '{{ .ProjectName }}_{{ .Version }}_manifest.json'
   name_template: '{{ .ProjectName }}_{{ .Version }}_SHA256SUMS'
   algorithm: sha256
-publishers:
-  - name: upload
-    checksum: true
-    extra_files:
-      - glob: 'terraform-registry-manifest.json'
-        name_template: '{{ .ProjectName }}_{{ .Version }}_manifest.json'
-    signature: true
-    env:
-      - HC_RELEASES_HOST={{ .Env.HC_RELEASES_HOST }}
-      - HC_RELEASES_KEY={{ .Env.HC_RELEASES_KEY }}
-    cmd: |
-      hc-releases upload -product {{ .ProjectName }} -version {{ .Version }} -file={{ .ArtifactPath }}={{ .ArtifactName }} -header="x-terraform-protocol-version=5.0" -header="x-terraform-protocol-versions=5.0"
 release:
   extra_files:
     - glob: 'terraform-registry-manifest.json'
