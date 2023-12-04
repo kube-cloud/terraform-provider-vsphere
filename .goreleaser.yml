@@ -65,4 +65,4 @@ release:
       name_template: '{{ .ProjectName }}_{{ .Version }}_manifest.json'
   ids:
     - GPG_FINGERPRINT
-  draft: false
+  draft: true
