@@ -1,13 +1,12 @@
 # Copyright (c) HashiCorp, Inc.
 # SPDX-License-Identifier: MPL-2.0
 
-archives:
-  - format: zip
-    name_template: '{{ .ProjectName }}_{{ .Version }}_{{ .Os }}_{{ .Arch }}'
+# Build Configuration
 builds:
   - binary: '{{ .ProjectName }}_v{{ .Version }}_x5'
     env:
       - CGO_ENABLED=0
+    mod_timestamp: '{{ .CommitTimestamp }}'
     flags:
       - -trimpath
     goos:
@@ -29,43 +28,44 @@ builds:
         goos: windows
     ldflags:
       - -s -w -X internal/provider.Version={{.Version}}
-    mod_timestamp: '{{ .CommitTimestamp }}'
+
+# Archive Arctefacts
+archives:
+  - format: zip
+    name_template: '{{ .ProjectName }}_{{ .Version }}_{{ .Os }}_{{ .Arch }}'
+
+# Check Sum
 checksum:
+  name_template: '{{ .ProjectName }}_{{ .Version }}_SHA256SUMS'
+  algorithm: sha256
   extra_files:
     - glob: 'terraform-registry-manifest.json'
       name_template: '{{ .ProjectName }}_{{ .Version }}_manifest.json'
-  name_template: '{{ .ProjectName }}_{{ .Version }}_SHA256SUMS'
-  algorithm: sha256
+
+# Sign Artefacts
+signs:
+  - artifacts: checksum
+    args:
+    - "--batch"
+    - "--local-user"
+    - "{{ .Env.GPG_FINGERPRINT }}"
+    - "--output"
+    - "${signature}"
+    - "--detach-sign"
+    - "${artifact}"
+
+# Release Arctfacts
 release:
+  disable: false
+  github:
+    owner: kube-cloud
+    name: terraform-provider-vsphere
   extra_files:
     - glob: 'terraform-registry-manifest.json'
       name_template: '{{ .ProjectName }}_{{ .Version }}_manifest.json'
   ids:
-    - none
-signs:
-  # Default Signature file (i.e. terraform-provider-NAME_VERSION_SHA256SUMS.sig)
-  - artifacts: checksum
-    args:
-    - "--batch"
-    - "--local-user"
-    - "{{ .Env.GPG_FINGERPRINT }}"
-    - "--output"
-    - "${signature}"
-    - "--detach-sign"
-    - "${artifact}"
-    
-  # Signature file with GPG Public Key ID in filename (i.e. terraform-provider-NAME_VERSION_SHA256SUMS.7685B676.sig)
-  - artifacts: checksum
-    id: sig-with-gpg-public-key-id
-    signature: ${artifact}.72D7468F.sig
-    args:
-    - "--batch"
-    - "--local-user"
-    - "{{ .Env.GPG_FINGERPRINT }}"
-    - "--output"
-    - "${signature}"
-    - "--detach-sign"
-    - "${artifact}"
-    
+    - GPG_FINGERPRINT
+
+# Generate Next Snapshot
 snapshot:
   name_template: "{{ .Tag }}-next"
