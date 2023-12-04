@@ -54,8 +54,6 @@ signs:
     - "--detach-sign"
     - "${artifact}"
 
-# Release Arctfacts
+# Release Arctifacts
 release:
-  ids:
-    - GPG_FINGERPRINT
   draft: true
