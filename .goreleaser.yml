@@ -56,13 +56,6 @@ signs:
 
 # Release Arctfacts
 release:
-  disable: false
-  github:
-    owner: kube-cloud
-    name: terraform-provider-vsphere
-  extra_files:
-    - glob: 'terraform-registry-manifest.json'
-      name_template: '{{ .ProjectName }}_{{ .Version }}_manifest.json'
   ids:
     - GPG_FINGERPRINT
   draft: true
