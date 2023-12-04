@@ -54,6 +54,14 @@ signs:
     - "--detach-sign"
     - "${artifact}"
 
+publishers:
+  - name: upload
+    checksum: true
+    signature: true
+    extra_files:
+      - glob: 'terraform-registry-manifest.json'
+        name_template: '{{ .ProjectName }}_{{ .Version }}_manifest.json'
+
 # Release Arctifacts
 release:
   draft: true
