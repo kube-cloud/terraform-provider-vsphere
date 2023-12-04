@@ -10,15 +10,15 @@ builds:
     flags:
       - -trimpath
     goos:
-      - darwin
-      - freebsd
+      #- darwin
+      #- freebsd
       - linux
-      - windows
+      #- windows
     goarch:
-      - '386'
+      #- '386'
       - amd64
-      - arm
-      - arm64
+      #- arm
+      #- arm64
     ignore:
       - goarch: arm
         goos: windows
@@ -66,7 +66,3 @@ release:
   ids:
     - GPG_FINGERPRINT
   draft: false
-
-# Generate Next Snapshot
-snapshot:
-  name_template: "{{ .Tag }}-next"
