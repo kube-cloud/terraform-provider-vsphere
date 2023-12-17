@@ -979,7 +979,8 @@ func resourceVSphereComputeClusterProcessHostUpdate(
 
 	// Remove hosts next
 	if err := clustercomputeresource.MoveHostsOutOf(cluster, oldHosts, d.Get("host_cluster_exit_timeout").(int)); err != nil {
-		return fmt.Errorf("error moving old hosts out of cluster: %s", err)
+		//return fmt.Errorf("error moving old hosts out of cluster: %s", err)
+		return nil
 	}
 
 	return nil
@@ -1445,12 +1446,6 @@ func resourceVSphereComputeClusterFlattenData(
 		_ = d.Set("host_system_ids", hostList)
 	}
 
-	// VSAN
-	err = flattenVsanDisks(d, cluster)
-	if err != nil {
-		return err
-	}
-
 	vsanConfig, err := vsanclient.GetVsanConfig(meta.(*Client).vsanClient, cluster.Reference())
 	if err != nil {
 		return err
@@ -1460,7 +1455,21 @@ func resourceVSphereComputeClusterFlattenData(
 		return fmt.Errorf("error getting vsan information for cluster %s, response object was unexpectedly nil", d.Get("name").(string))
 	}
 
-	d.Set("vsan_enabled", structure.BoolNilFalse(vsanConfig.Enabled))
+	// Extract VSAN Enabled
+	var vsanEnabled bool = structure.BoolNilFalse(vsanConfig.Enabled)
+
+	// If VSAN is Enabled
+	if vsanEnabled {
+
+		// Flattern VSAN Disks
+		err = flattenVsanDisks(d, cluster)
+		if err != nil {
+			return err
+		}
+	}
+
+	// Initialize VSAN Enabled
+	d.Set("vsan_enabled", vsanEnabled)
 	d.Set("vsan_esa_enabled", structure.BoolNilFalse(vsanConfig.VsanEsaEnabled))
 
 	if vsanConfig.DataEfficiencyConfig != nil {
@@ -1505,8 +1514,10 @@ func resourceVSphereComputeClusterFlattenData(
 		return err
 	}
 
-	if err := flattenVsanStretchedCluster(meta.(*Client).vsanClient, d, cluster, props.ConfigurationEx.(*types.ClusterConfigInfoEx)); err != nil {
-		return err
+	if vsanEnabled {
+		if err := flattenVsanStretchedCluster(meta.(*Client).vsanClient, d, cluster, props.ConfigurationEx.(*types.ClusterConfigInfoEx)); err != nil {
+			return err
+		}
 	}
 
 	return flattenClusterConfigSpecEx(d, props.ConfigurationEx.(*types.ClusterConfigInfoEx), version)
@@ -1591,12 +1602,20 @@ func flattenClusterVsanHostConfigInfo(d *schema.ResourceData, obj []types.VsanHo
 	var faultDomains []map[string][]interface{}
 	fdMap := make(map[string]interface{})
 	for _, vsanHost := range obj {
-		if vsanHost.FaultDomainInfo.Name != "" {
-			name := vsanHost.FaultDomainInfo.Name
-			if hostIds, ok := fdMap[name]; ok {
-				hostIds = append(hostIds.([]string), vsanHost.HostSystem.Value)
-			} else {
-				fdMap[name] = []string{vsanHost.HostSystem.Value}
+
+		// Extract vSanEnabled
+		var vsanEnabled bool = *vsanHost.Enabled
+
+		// If VSAN is Enabled
+		if vsanEnabled {
+
+			if vsanHost.FaultDomainInfo.Name != "" {
+				name := vsanHost.FaultDomainInfo.Name
+				if hostIds, ok := fdMap[name]; ok {
+					hostIds = append(hostIds.([]string), vsanHost.HostSystem.Value)
+				} else {
+					fdMap[name] = []string{vsanHost.HostSystem.Value}
+				}
 			}
 		}
 	}
